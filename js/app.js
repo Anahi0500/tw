@@ -1,4 +1,16 @@
-if(navigator.serviceWorker){
+// Equipo:
+// Karen Melissa Vargas Téllez - Yesenia Anahi Juárez Hernández
+
+
+var url = window.location.href;
+var swLocation = '/tw/sw.js'; //nombre de la carpeta del url  https://anahi0500.github.io/tw/
+
+
+
+if(navigator.serviceWorker){ //Service worker en el navegador 
+    if (url.includes('localhost')){  //Icluye el localhost como url
+        swLocation = '/sw.js';  
+    }
     navigator.serviceWorker.register('/sw.js');
 }
 
